@@ -1,0 +1,3 @@
+class Multiple_inheri{
+    
+}
