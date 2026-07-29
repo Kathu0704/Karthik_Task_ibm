@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+   <!-- Choose implementation -->
+   <bean id="notificationService" class="com.bank.EmailNotificationService"/>
+
+   <!-- Inject dependency -->
+   <bean id="fundTransferService" class="com.bank.FundTransferService">
+       <constructor-arg ref="notificationService"/>
+   </bean>
+
+  <!-- <bean id="paymentService"
+          class="com.bank.CreditCardPayment"/> -->
+     <bean id="paymentService"
+      class="com.bank.DebitCardPayment"/>
+
+
+    <bean id="orderService"
+          class="com.bank.OrderService">
+
+        <constructor-arg ref="paymentService"/>
+
+    </bean>
+
+   
+
+</beans>

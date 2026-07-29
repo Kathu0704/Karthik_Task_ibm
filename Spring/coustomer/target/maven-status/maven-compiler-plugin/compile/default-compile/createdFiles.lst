@@ -1,0 +1,5 @@
+com\example\customerapp\repository\CustomerRepository.class
+com\customerapp\App.class
+com\example\customerapp\controller\CustomerController.class
+com\example\customerapp\CustomerappApplication.class
+com\example\customerapp\entity\Customer.class
