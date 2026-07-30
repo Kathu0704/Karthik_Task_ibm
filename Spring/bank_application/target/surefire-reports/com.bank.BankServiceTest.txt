@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.bank.BankServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.654 s <<< FAILURE! - in com.bank.BankServiceTest
+testWithdrawSuccess  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <300.0> but was: <200.0>
+	at com.bank.BankServiceTest.testWithdrawSuccess(BankServiceTest.java:46)
+
