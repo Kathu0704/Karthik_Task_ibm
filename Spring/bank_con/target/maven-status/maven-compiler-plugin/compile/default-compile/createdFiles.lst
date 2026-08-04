@@ -1,0 +1,6 @@
+com\example\bank\BankApplication.class
+com\example\bank\repository\AccountRepository.class
+com\example\bank\controller\BankController.class
+com\example\bank\entity\BankBranch.class
+com\example\bank\entity\Account.class
+com\example\bank\repository\BankBranchRepository.class
