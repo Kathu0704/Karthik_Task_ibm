@@ -1,0 +1,45 @@
+<h2>Fund Transfer</h2>
+
+
+<form [formGroup]="transferForm"
+(ngSubmit)="transfer()">
+
+
+
+<label>
+Account Number
+</label>
+
+<input 
+type="text"
+formControlName="accountNumber">
+
+
+
+<label>
+Amount
+</label>
+
+<input
+type="number"
+formControlName="amount">
+
+
+
+<div *ngIf="
+transferForm.controls.amount.errors?.['min']">
+
+Amount should be minimum ₹100
+
+</div>
+
+
+
+<button type="submit">
+
+Transfer Money
+
+</button>
+
+
+</form>

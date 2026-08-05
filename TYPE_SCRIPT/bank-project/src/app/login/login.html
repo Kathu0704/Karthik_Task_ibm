@@ -1,0 +1,26 @@
+<h2>Bank Login</h2>
+
+
+<input 
+placeholder="Account Number"
+[(ngModel)]="account">
+
+
+<br><br>
+
+
+<input 
+type="password"
+placeholder="Password"
+[(ngModel)]="password">
+
+
+<br><br>
+
+
+<button (click)="login()">
+Login
+</button>
+
+
+<p>{{message}}</p>

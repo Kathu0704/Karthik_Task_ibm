@@ -100,3 +100,29 @@ if (typeof value2 === "string") {
 }
 
 console.log("*********************************************");
+
+class Student_2{
+
+  name: string;
+  age: number;
+
+  // Constructor
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Function / Method
+  displayDetails() {
+    console.log("Name: " + this.name);
+    console.log("Age: " + this.age);
+  }
+}
+
+// Creating an object
+let student1 = new Student_2("John", 20);
+
+// Calling function
+student1.displayDetails();
+
+console.log("*********************************************");

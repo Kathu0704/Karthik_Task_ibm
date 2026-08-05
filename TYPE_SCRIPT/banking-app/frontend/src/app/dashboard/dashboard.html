@@ -1,0 +1,83 @@
+<div class="dashboard">
+
+  <header class="header">
+    <h2>🏦 MyBank Dashboard</h2>
+    <div class="user">
+      Welcome, Karthik
+    </div>
+  </header>
+
+  <div class="cards">
+
+    <div class="card balance">
+      <h3>Account Balance</h3>
+      <h1>₹{{ balance.toLocaleString() }}</h1>
+    </div>
+
+    <div class="card income">
+      <h3>Income</h3>
+      <h1>₹45,000</h1>
+    </div>
+
+    <div class="card expense">
+      <h3>Expenses</h3>
+      <h1>₹18,500</h1>
+    </div>
+
+    <div class="card savings">
+      <h3>Savings</h3>
+      <h1>₹27,000</h1>
+    </div>
+
+  </div>
+
+  <div class="transfer-card">
+    <h2>Transfer Funds</h2>
+
+    <div class="transfer-form">
+      <label>
+        Recipient Account
+        <input type="text" [(ngModel)]="targetAccount" placeholder="ACC1234" />
+      </label>
+      <label>
+        Amount
+        <input type="number" [(ngModel)]="transferAmount" placeholder="1000" />
+      </label>
+      <button class="btn" (click)="transferFunds()">Send Money</button>
+    </div>
+
+    <div class="transfer-message" [class.success]="success" [class.error]="!success" *ngIf="message">
+      {{ message }}
+    </div>
+  </div>
+
+  <div class="transactions">
+
+    <h2>Recent Transactions</h2>
+
+    <table>
+
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.date }}</td>
+        <td>{{ transaction.description }}</td>
+        <td [ngClass]="{ credit: transaction.amount > 0, debit: transaction.amount < 0 }">
+          {{ transaction.amount > 0 ? '+' : '' }}₹{{ transaction.amount.toLocaleString() }}
+        </td>
+        <td>{{ transaction.status }}</td>
+      </tr>
+
+    </table>
+
+  </div>
+  <button routerLink="/transactions" class="btn">
+    View All Transactions
+  </button>
+
+</div>
