@@ -1,0 +1,21 @@
+<h3>Transaction History</h3>
+
+<table class="table table-bordered table-striped">
+
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Receiver</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let t of transactions">
+      <td>{{ t.type }}</td>
+      <td>{{ t.receiver }}</td>
+      <td>{{ t.amount | currency:'INR':'symbol':'1.2-2' }}</td>
+    </tr>
+  </tbody>
+
+</table>

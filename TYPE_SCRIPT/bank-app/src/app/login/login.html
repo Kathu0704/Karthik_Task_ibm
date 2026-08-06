@@ -1,0 +1,36 @@
+<div class="container mt-5">
+
+<div class="card p-4">
+
+<h2>Bank Login</h2>
+
+<input
+class="form-control mt-3"
+placeholder="Account Number"
+#acc>
+
+<input
+class="form-control mt-3"
+type="password"
+placeholder="Password"
+#pwd>
+
+<button
+class="btn btn-primary mt-3"
+(click)="login(acc.value,pwd.value)">
+
+Login
+
+</button>
+<a 
+routerLink="/register"
+class="btn btn-success mt-3">
+
+Create New Account
+
+</a>
+
+</div>
+
+
+</div>

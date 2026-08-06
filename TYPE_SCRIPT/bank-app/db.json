@@ -1,0 +1,97 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "accountNumber": "123456789",
+      "password": "123456789",
+      "balance": 46000
+    },
+    {
+      "id": "aWL5FaWWwXc",
+      "accountNumber": "123123123",
+      "password": "123123123",
+      "balance": 46000
+    },
+    {
+      "id": "L2Y9uOm-yE0",
+      "accountNumber": "2",
+      "password": "123123123",
+      "balance": 46000
+    },
+    {
+      "id": "k4s4h-hsMpw",
+      "accountNumber": "999999999",
+      "password": "99999999",
+      "balance": 1000
+    },
+    {
+      "accountNumber": "123456123",
+      "password": "123456789",
+      "balance": 600000,
+      "id": "kIb-vMDl6gU"
+    },
+    {
+      "accountNumber": "123456123",
+      "password": "123456789",
+      "balance": 600000,
+      "id": "ZRbn3HZs8uE"
+    },
+    {
+      "accountNumber": "456456456",
+      "password": "456456456",
+      "balance": 560000,
+      "id": "2Mb74Z-IyFQ"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "type": "Credit",
+      "receiver": "-",
+      "amount": 5000
+    },
+    {
+      "id": "2",
+      "type": "Debit",
+      "receiver": "-",
+      "amount": 1000
+    },
+    {
+      "type": "Transfer",
+      "receiver": "123123123",
+      "amount": 2000,
+      "id": "7XwmNyPBeag"
+    },
+    {
+      "type": "Transfer",
+      "receiver": "123123123",
+      "amount": 2000,
+      "id": "F6i3d-Pb-V8"
+    },
+    {
+      "userId": "k4s4h-hsMpw",
+      "accountNumber": "999999999",
+      "type": "Transfer",
+      "receiver": "123123123",
+      "amount": 3000,
+      "id": "8wHhR5K_uVU"
+    },
+    {
+      "userId": "k4s4h-hsMpw",
+      "accountNumber": "999999999",
+      "type": "Transfer",
+      "receiver": "123123123",
+      "amount": 3000,
+      "id": "MGefkCYiavA"
+    },
+    {
+      "userId": "k4s4h-hsMpw",
+      "accountNumber": "999999999",
+      "type": "Transfer",
+      "receiver": "123123123",
+      "amount": 3000,
+      "id": "yrvNRvS6BkA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

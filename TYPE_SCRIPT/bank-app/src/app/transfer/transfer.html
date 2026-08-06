@@ -1,0 +1,25 @@
+<h3>Fund Transfer</h3>
+
+<input
+type="text"
+class="form-control"
+placeholder="Receiver Account"
+#receiver>
+
+<br>
+
+<input
+type="number"
+class="form-control"
+placeholder="Amount"
+#amount>
+
+<br>
+
+<button
+class="btn btn-success"
+(click)="transferMoney(receiver.value, amount.value)">
+
+Transfer
+
+</button>

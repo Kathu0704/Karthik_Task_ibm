@@ -1,0 +1,29 @@
+<div class="container mt-4">
+
+  <h2>Bank Dashboard</h2>
+
+  <hr>
+
+  <h4>
+    Account Number :
+    {{ accountNumber | accountMask }}
+  </h4>
+
+  <h3>
+        Balance (INR):
+        {{ bank.currentUser?.balance | currency:'INR':'symbol':'1.2-2' }}
+    </h3>
+
+    <h5>
+        Balance (USD):
+        {{ getBalanceInUSD() | currency:'USD':'symbol':'1.2-2' }}
+    </h5>
+  <hr>
+
+  <app-transfer></app-transfer>
+
+  <hr>
+
+  <app-transaction></app-transaction>
+
+</div>
