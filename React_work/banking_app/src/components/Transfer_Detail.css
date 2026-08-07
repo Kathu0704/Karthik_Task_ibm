@@ -1,0 +1,365 @@
+/* =========================================
+   TRANSFER PAGE
+========================================= */
+
+.transfer-form-card {
+  width: 100%;
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 40px 45px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.08);
+
+  animation: transferCardAppear 0.4s ease;
+}
+
+
+/* =========================================
+   CARD ANIMATION
+========================================= */
+
+@keyframes transferCardAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+  border: none;
+  background: transparent;
+
+  color: #2563eb;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  padding: 8px 0;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  color: #1d4ed8;
+  transform: translateX(-3px);
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.transfer-form-card h1 {
+  margin: 25px 0 10px;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  color: #172033;
+}
+
+
+/* =========================================
+   AVAILABLE BALANCE
+========================================= */
+
+.transfer-form-card > p {
+  margin: 0 0 30px;
+
+  font-size: 17px;
+
+  color: #64748b;
+}
+
+.transfer-form-card > p strong {
+  color: #2563eb;
+
+  font-size: 21px;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.transfer-form-card .error-message {
+  margin-bottom: 25px;
+
+  padding: 15px 18px;
+
+  border-radius: 10px;
+
+  background: #fee2e2;
+
+  color: #b91c1c;
+
+  border-left: 5px solid #dc2626;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #172033;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px 17px;
+
+  border: 1px solid #d5dce7;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  font-size: 16px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* INPUT HOVER */
+
+.form-group input:hover {
+  border-color: #aab4c3;
+}
+
+
+/* INPUT FOCUS */
+
+.form-group input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.12);
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   INPUT PLACEHOLDER
+========================================= */
+
+.form-group input::placeholder {
+  color: #9aa4b2;
+}
+
+
+/* =========================================
+   SMALL HELP TEXT
+========================================= */
+
+.form-group small {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   INSUFFICIENT BALANCE
+========================================= */
+
+.insufficient-text {
+  color: #dc2626 !important;
+
+  font-weight: 600;
+
+  margin-top: 9px !important;
+}
+
+
+/* =========================================
+   NUMBER INPUT
+========================================= */
+
+/* Remove arrows in Chrome, Edge, Safari */
+
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+
+/* =========================================
+   TRANSFER BUTTON
+========================================= */
+
+.transfer-submit-button {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 16px 20px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.transfer-submit-button:hover:not(:disabled) {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* BUTTON ACTIVE */
+
+.transfer-submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+
+/* BUTTON DISABLED */
+
+.transfer-submit-button:disabled {
+  background: #cbd5e1;
+
+  color: #64748b;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+
+  transform: none;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .transfer-form-card {
+    width: calc(100% - 30px);
+
+    margin: 25px auto;
+
+    padding: 30px 25px;
+
+    border-radius: 16px;
+  }
+
+  .transfer-form-card h1 {
+    font-size: 29px;
+  }
+
+  .transfer-form-card > p {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .transfer-form-card {
+    width: calc(100% - 20px);
+
+    padding: 25px 20px;
+  }
+
+  .transfer-form-card h1 {
+    font-size: 26px;
+  }
+
+  .form-group input {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .transfer-submit-button {
+    padding: 15px;
+
+    font-size: 16px;
+  }
+
+}
