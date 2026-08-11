@@ -1,0 +1,27 @@
+Explain why lambda expressions were introduced in Java 8.
+Answer: Lambda expressions were introduced to enable functional-style programming, make code more concise, and simplify operations on collections and streams by allowing behavior to be passed as data.
+
+What is a functional interface? Give two examples from the Java API.
+Answer: A functional interface is an interface with a single abstract method, making it usable as the target for lambda expressions and method references.
+Examples: `java.util.function.Function` and `java.util.function.Predicate`.
+
+Differentiate between Streams and Collections.
+Answer: Collections store data and provide methods to add, remove, and access elements, while Streams represent a pipeline for processing data and do not store elements. Streams support lazy, functional-style operations like map, filter, and reduce, whereas Collections are mutable data structures.
+
+What problem does the Optional class solve?
+Answer: `Optional` solves the problem of null references by representing values that may or may not be present, reducing the risk of `NullPointerException` and making absence explicit.
+
+Why were default methods added to interfaces in Java 8?
+Answer: Default methods were added to allow interfaces to evolve without breaking existing implementations, enabling new methods to be added with a default implementation.
+
+What are method references and how do they improve readability?
+Answer: Method references are a shorthand syntax for lambdas that refer to existing methods, such as `ClassName::methodName` or `object::instanceMethod`. They improve readability by making code shorter and more declarative.
+
+Describe the improvements in the Date-Time API compared to java.util.Date.
+Answer: The Java 8 Date-Time API is immutable, thread-safe, more fluent, and offers clear classes like `LocalDate`, `LocalTime`, and `ZonedDateTime` with better timezone support and a richer API than `java.util.Date`.
+
+How does the Base64 API simplify encoding/decoding tasks?
+Answer: The Base64 API provides built-in encoder and decoder classes in `java.util.Base64`, making Base64 operations straightforward without third-party libraries and reducing boilerplate code.
+
+Give a real-world example where static methods in interfaces are useful.
+Answer: Static methods in interfaces are useful for providing helper or factory methods related to the interface, such as `Comparator.comparing(...)` or `Stream.of(...)`, which classify functionality without requiring an implementation class.

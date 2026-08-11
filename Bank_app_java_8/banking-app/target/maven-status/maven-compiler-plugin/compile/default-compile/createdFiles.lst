@@ -1,0 +1,8 @@
+com\bank\App.class
+com\bank\model\Credit.class
+com\bank\processor\TransactionProcessor.class
+com\bank\service\BankService.class
+com\bank\model\Transfer.class
+com\bank\model\Customer.class
+com\bank\model\Debit.class
+com\bank\model\Transaction.class
