@@ -1,0 +1,26 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "name": "Everyday Checking",
+      "type": "Checking",
+      "balance": 4820.55,
+      "accountNumber": "**** 4821"
+    },
+    {
+      "id": 2,
+      "name": "High-Yield Savings",
+      "type": "Savings",
+      "balance": 15230.12,
+      "accountNumber": "**** 7734"
+    }
+  ],
+  "transactions": [
+    { "id": 1, "accountId": 1, "date": "2026-08-10", "description": "Green Leaf Grocery", "amount": -64.32 },
+    { "id": 2, "accountId": 1, "date": "2026-08-09", "description": "Payroll Deposit", "amount": 2100.0 },
+    { "id": 3, "accountId": 1, "date": "2026-08-07", "description": "Electric Utility", "amount": -88.4 },
+    { "id": 4, "accountId": 2, "date": "2026-08-05", "description": "Interest Payment", "amount": 12.87 },
+    { "id": 5, "accountId": 1, "date": "2026-08-02", "description": "Coffee Roasters", "amount": -5.75 },
+    { "id": 6, "accountId": 2, "date": "2026-07-28", "description": "Transfer from Checking", "amount": 500.0 }
+  ]
+}

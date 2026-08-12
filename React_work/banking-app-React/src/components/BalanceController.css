@@ -1,0 +1,85 @@
+.balance-controller {
+  background: #fff;
+  border: 1px solid #e4e1d6;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 600px;
+  box-shadow: 0 20px 60px rgba(15, 23, 45, 0.08);
+}
+
+.balance-controller__header {
+  margin-bottom: 18px;
+}
+
+.balance-controller__title {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+}
+
+.balance-controller__hint {
+  margin: 0;
+  color: #5b6172;
+  font-size: 0.95rem;
+}
+
+.balance-controller__form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.balance-controller__label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #16294f;
+}
+
+.balance-controller__input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dce1e8;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.balance-controller__input:focus {
+  border-color: #c89b3c;
+  box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.12);
+}
+
+.balance-controller__error {
+  color: #b5462f;
+  margin: 0 0 16px;
+}
+
+.balance-controller__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.balance-controller__button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.balance-controller__button--deposit {
+  background-color: #2e7d5b;
+}
+
+.balance-controller__button--withdraw {
+  background-color: #b5462f;
+}
+
+.balance-controller__balance {
+  margin-top: 18px;
+  color: #16294f;
+  font-size: 1rem;
+}

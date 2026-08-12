@@ -1,0 +1,22 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f6f4ee;
+}
+
+h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.balance-controller {
+  margin: 20px auto;
+}
+
+footer.footer {
+  margin-top: auto;
+  padding: 24px 32px;
+  color: #5b6172;
+  text-align: center;
+}

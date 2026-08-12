@@ -15,7 +15,40 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+<dependencies>
+<!-- PostgreSQL JDBC driver — used by the actual application code -->
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.7.3</version>
+</dependency>
 
+<!-- Testcontainers — test scope only -->
+<dependency>
+    <groupId>org.testcontainers</groupId>
+    <artifactId>testcontainers</artifactId>
+    <version>1.19.8</version>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.testcontainers</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>1.19.8</version>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.testcontainers</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    <version>1.19.8</version>
+    <scope>test</scope>
+</dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.10.2</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
     <build>
         <finalName>banking-app</finalName>
         <plugins>
@@ -35,6 +68,30 @@
                     <mainClass>com.bank.App</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.2.5</version>
+    <configuration>
+        <!-- Surefire runs unit tests, skips *IT.java -->
+        <excludes>
+            <exclude>**/*IT.java</exclude>
+        </excludes>
+    </configuration>
+</plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-failsafe-plugin</artifactId>
+    <version>3.2.5</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>integration-test</goal>
+                <goal>verify</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
         </plugins>
     </build>
 </project>
