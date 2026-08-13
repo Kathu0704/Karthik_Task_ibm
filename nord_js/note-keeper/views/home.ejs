@@ -1,0 +1,75 @@
+<head><link rel="stylesheet" href="/style.css"></head>
+<body>
+
+    <h1>Note Keeper</h1>
+
+    <div class="notes-container">
+
+        <% data.forEach(element => { %>
+
+            <div class="note">
+
+                <form action="/update" method="post">
+
+                    <input
+                        type="hidden"
+                        name="noteId"
+                        value="<%= element.noteId %>"
+                    >
+
+                    <textarea
+                        name="noteContent"
+                        placeholder="Type Here..."
+                    ><%= element.noteContent %></textarea>
+
+                    <br>
+
+                    <button type="submit" class="update-btn">
+                        Update
+                    </button>
+
+                </form>
+
+                <form action="/delete" method="post">
+
+                    <input
+                        type="hidden"
+                        name="noteId"
+                        value="<%= element.noteId %>"
+                    >
+
+                    <button type="submit" class="delete-btn">
+                        Delete
+                    </button>
+
+                </form>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+
+    <h1>Add Note</h1>
+
+    <div class="add-note">
+
+        <form action="/" method="post">
+
+            <textarea
+                name="noteContent"
+                placeholder="Type your new note here..."
+            ></textarea>
+
+            <br>
+
+            <button type="submit" class="add-btn">
+                Add Note
+            </button>
+
+        </form>
+
+    </div>
+
+</body>

@@ -1,0 +1,17 @@
+{
+  "name": "note-keeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.x",
+    "ejs": "^3.x",
+    "express": "^5.x"
+  }
+}
